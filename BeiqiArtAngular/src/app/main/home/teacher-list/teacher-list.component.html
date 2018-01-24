@@ -1,0 +1,12 @@
+<div class="tearcher-list container-fluid">
+  <app-sub-brand title="Teachers" bacImgUrl="/assets/img/main/teachers.jpg"></app-sub-brand>
+
+  <div class="t-list-con container">
+    <div class="row">
+      <div class="col-4" *ngFor="let teacher of teachers">
+        <app-common-card [desc]="teacher.describe" [imgUrl]="teacher.avatar? teacher.avatar: 'http://via.placeholder.com/300x300'" [title]="teacher.name"></app-common-card>
+      </div>
+    </div>
+
+  </div>
+</div>

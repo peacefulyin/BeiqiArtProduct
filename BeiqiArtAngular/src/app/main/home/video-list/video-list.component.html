@@ -1,0 +1,15 @@
+<app-crumb-nav></app-crumb-nav>
+<div class="videos-parent container-fluid">
+  <div class="row">
+    <div class="col-4" *ngFor="let list of defaultVideoList">
+      <a [routerLink]="['/videoList', list.title]">
+        <h2>{{list.title}}</h2>
+        <p>{{list.describe}}</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+<div class="video-list container">
+  <app-video-card class="video-card-con" [videoList]="videoList.videos"></app-video-card>
+</div>

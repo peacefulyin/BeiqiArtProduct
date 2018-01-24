@@ -1,0 +1,14 @@
+<div class="article-con">
+  <h1 class="title">{{article.title}}</h1>
+  <div class="row article-info">
+    <div class="labels">
+      <ul>
+        <li *ngFor="let tag of article.tags">{{tag}}</li>
+      </ul>
+    </div>
+    <span class="pub-date">{{article.create_time| date:'yyyy-MM-dd'}}</span>
+    <span class="author">{{article.author}}</span>
+  </div>
+  <div  class="row article" [innerHTML]="articleContent | safeHtml "></div>
+
+</div>
